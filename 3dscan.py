@@ -52,7 +52,7 @@ try:
     motorSpeedCharacteristics.write(motorSpeed.to_bytes(1, byteorder="little"))
     motorAccelCharacteristics.write(motorAccel.to_bytes(1, byteorder="little"))
     for l in range(10):
-        motorIposCharacteristics.write(motorSteps.to_bytes(4, byteorder="little"))
+        motorIposCharacteristics.write(motorSteps.to_bytes(8, byteorder="little"))
         time.sleep(2)
 
 finally:
